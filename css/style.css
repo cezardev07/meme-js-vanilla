@@ -1,0 +1,64 @@
+main{
+    width: 600px; height: 500px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.header h1, .btn_yes, .btn_not{
+    color: #ffff;
+}
+.header{
+    position: absolute;
+    width: 100%;
+    padding: 20px 10px;
+    cursor: default;
+}
+.header h1{
+    text-align: center;
+}
+.header h1::selection{
+    background: none;
+}
+button{
+    cursor: pointer;
+    padding: 10px 25px;
+    font-size: 20px;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+button:active{
+    scale: .9;
+}
+.btn_yes{
+    background: rgb(14, 182, 79);
+    text-align: end;
+}
+.btn_not{
+    background: rgb(222, 12, 40);
+    z-index: 10;
+}
+.yes, .not{
+    display: flex;
+    align-items: center;
+}
+.yes{
+    justify-content: start;
+}
+.not{
+    justify-content: end;
+}
+img{
+    display: none;
+    position: fixed;
+    object-fit: cover;
+    z-index: 20;
+}
+@keyframes open{
+    from{
+        width: 10px;
+    }
+    to{
+        width: 100%;
+    }
+}
